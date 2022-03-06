@@ -10,8 +10,7 @@
 
 <script>
 import firebase from 'firebase'
-export default {
-  
+export default {  
   methods: {
     logout() {
       firebase
@@ -27,7 +26,9 @@ export default {
         });
     },
   },
-
+  created(){
+    
+  }
 }
 </script>
 

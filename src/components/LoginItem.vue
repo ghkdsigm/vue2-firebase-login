@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h3>Show</h3>
+    <h3>로그인</h3>
     <input type="text" v-model="email" placeholder="email"><br>
     <input type="password" v-model="password" placeholder="password" @keyup.enter="login"><br>
     <button v-on:click="login">로그인</button>
@@ -25,7 +25,7 @@
         if(this.email !== '' && this.password !== ''){
           firebase.auth().signInWithEmailAndPassword(this.email, this.password)
           .then(() => {
-            alert(`님 환영합니다.`);
+            alert(`${this.email}님 환영합니다.`);
             this.$router.push('/hello');
           })
           .catch(err => {
@@ -45,12 +45,21 @@
   input {
     margin: 10px 0;
     width: 20%;
-    padding: 15px;
+    padding: 15px;    
+    border:1px solid #000;
+    border-radius: 5px;
+  }
+  input:focus-visible {
+    outline:0;
+    border:1px solid #2c77c4;
   }
   button {
     margin-top: 20px;
     width: 10%;
     cursor: pointer;
+    border: 1px solid #000;
+    padding: 5px;
+    background: #fff;
   }
   p {
     margin-top: 40px;

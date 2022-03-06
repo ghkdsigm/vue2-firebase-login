@@ -1,6 +1,6 @@
 <template>
   <div class="sign-up">
-    <p>회원가입</p>
+    <h3>회원가입</h3>
     <input type="text" v-model="email" placeholder="email"><br>
     <input type="password" v-model="password" placeholder="password"><br>
     <button v-on:click="signUp">가입하기</button>
@@ -45,12 +45,21 @@
   input {
     margin: 10px 0;
     width: 20%;
-    padding: 15px;
+    padding: 15px;    
+    border:1px solid #000;
+    border-radius: 5px;
+  }
+  input:focus-visible {
+    outline:0;
+    border:1px solid #2c77c4;
   }
   button {
     margin-top: 20px;
     width: 10%;
     cursor: pointer;
+    border: 1px solid #000;
+    padding: 5px;
+    background: #fff;
   }
   p {
     margin-top: 40px;
